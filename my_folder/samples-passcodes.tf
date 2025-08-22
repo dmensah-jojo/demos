@@ -19,8 +19,8 @@ echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
 EOF
 environment {
     variables = {
-      access_key = "AKIAIOSFODNN7EXAMPLE"
-      secret_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+      access_key = "${access_key}"
+      secret_key = "${secret_key}"
     }
   }
 provider "aws" {
